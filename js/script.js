@@ -119,4 +119,69 @@ filaPopular.addEventListener('mouseleave', () => {
 });
 
 
+const apiUrl = '/api/recientes';
 
+async function obtenerPeliculas() {
+  try {
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(`Error al obtener películas: ${response.status} - ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error al obtener películas:', error);
+    throw error;
+  }
+}
+
+obtenerPeliculas()
+  .then((peliculas) => {
+    console.log('Tipo de datos de fechas de estreno:', typeof peliculas[0].fecha_estreno);
+    // Ordenar las películas por año de estreno (ascendente)
+    peliculas.sort((a, b) => a.fecha_estreno - b.fecha_estreno);
+    
+    // Llama a una función para mostrar las películas en tu página web
+    mostrarPeliculas(peliculas);
+  })
+  .catch((error) => {
+    // Manejar errores en caso de que ocurran
+    console.error('Error al obtener películas:', error);
+  });
+
+function mostrarPeliculas(peliculas) {
+    const contenedorCarousel = document.getElementById('carousel-tendencia');
+    const carousel = contenedorCarousel.querySelector('.carousel');
+
+    peliculas.sort((a, b) => {
+        const fechaA = parseInt(a.getAttribute('data-fecha-estreno'));
+        const fechaB = parseInt(b.getAttribute('data-fecha-estreno'));
+        return fechaA - fechaB;
+      });
+
+    carousel.innerHTML = '';
+    
+    peliculas.forEach((pelicula, index) => {
+      const tarjeta = document.createElement('div');
+      tarjeta.classList.add('pelicula');
+
+      const imagen = document.createElement('img');
+      imagen.src = pelicula.imagenURL;
+      imagen.alt = `Imagen de ${pelicula.titulo}`;
+
+      const botonInformacion = document.createElement('button');
+      botonInformacion.classList.add('tarjeta-botón');
+      botonInformacion.textContent = 'Más Información';
+
+      botonInformacion.addEventListener('click', () => {
+          mostrarInformacionPelicula(pelicula);
+      });
+
+      tarjeta.appendChild(imagen);
+      tarjeta.appendChild(botonInformacion);
+
+      carousel.appendChild(tarjeta);
+  });
+}

@@ -25,7 +25,31 @@ connection.connect((err) => {
     console.log('Conexión exitosa a la base de datos');
   });
 
-  const port = 4000;
+  app.get('/api/recientes', (req, res) => {
+    const query = 'SELECT * FROM peliculas ORDER BY fecha_estreno DESC';
+    connection.query(query, (err, results) => {
+      if (err) {
+        console.error('Error al consultar películas', err);
+        res.status(500).json({ error: 'Error al consultar películas' });
+      } else {
+        res.json(results);
+      }
+     });
+  });
+
+  app.get('/api/calificacion', (req, res) => {
+    const query = 'SELECT * FROM peliculas ORDER BY calificacion DESC';
+    connection.query(query, (err, results) => {
+      if (err) {
+        console.error('Error al consultar películas', err);
+        res.status(500).json({ error: 'Error al consultar películas' });
+      } else {
+        res.json(results);
+      }
+     });
+  });
+
+const port = 4000;
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
 });
