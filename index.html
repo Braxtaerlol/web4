@@ -1,11 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <title>Pelis-Gratis</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Pelis-Gratis</h2>
+            <nav>
+                <a href="./index.html" class="activo">Inicio</a>
+                <a href="./vistas/peliculas.html">Peliculas</a>
+                <a href="./vistas/series.html">Series</a>
+                <a href="./vistas/popular.html">Popular</a>
+                <a href="./vistas/mas_reciente.html">Mas reciente</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">La monja II  </h3>
+                <p class="descripcion">
+                    1956, Francia. Un sacerdote es asesinado, un mal se extiende y la hermana Irene se enfrenta de nuevo a la fuerza malévola de Valak, la monja demonio.
+                </p>
+                <p class="fecha-estreno">Fecha de Estreno: 2023</p>
+                <button role="button" class="boton"><i class="fa-solid fa-play"></i><a
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Reproducir</a></button>
+                <button role="button" class="boton"><i class="fa-solid fa-circle-info"></i>Más Información</button>
+            </div>
+        </div>
+        <div class="peliculas-recomendadas contenedor" id="contenedor-tendencia">
+            <div class="contenedor-titulo-controles">
+                <h3>Tendencia</h3>
+                <div class="indicadores"></div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda-tendencia" class="flecha-izquierda"><img
+                        src="./img/flecha_derecha.png" alt="">
+                </button>
+                <div class="contenedor-carousel" id="carousel-tendencia">
+                     <div class="carousel">
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/poster_elemental.jpg" alt="imagen de halo"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog1.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                            <dialog id="dialog1">
+                                <h2>Elemental</h2>
+                                <p>AÑO: 2023</p>
+                                <p>En una ciudad en la que los elementos de fuego, agua, tierra y aire viven en distritos separados, una chica de fuego y un chico de agua descubren que, aunque la sociedad les diga lo contrario, tienen muchas cosas en común.</p>
+                                <button onclick="window.dialog1.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/Stranger Things.jpg" alt="imagen de watchmen"></a> <button class="tarjeta-botón" onclick="window.dialog2.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog2">
+                                        <h2>Stranger things</h2>
+                                        <p>AÑO: 2016</p>
+                                        <p>La trama de "Stranger Things" se desarrolla en los años 80 en el ficticio pueblo de Hawkins, Indiana. La serie combina elementos de ciencia ficción, terror y aventuras. La historia gira en torno a la desaparición de un niño llamado Will Byers y las extrañas y sobrenaturales experiencias que enfrentan él, sus amigos y su madre mientras intentan encontrarlo. A medida que la trama avanza, se descubre la existencia de un mundo paralelo llamado el "Mundo del Revés" (The Upside Down), poblado por criaturas aterradoras y peligrosas.</p>
+                                        <button onclick="window.dialog2.close();" aria-label="close" class="x">❌</button>
+                                    </dialog></div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/poster_la_sirenita.jpg" alt="imagen de ghost in the shell"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog3.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog3">
+                                        <h2>La sirenita</h2>
+                                        <p>AÑO: 2023</p>
+                                        <p>Una joven sirena que anhela conocer el mundo que se extiende donde acaba el mar emerge a la superficie y se enamora del príncipe Eric. Sin embargo, la única manera de estar con él exige hacer un pacto con Úrsula, la perversa bruja del mar.</p>
+                                        <button onclick="window.dialog3.close();" aria-label="close" class="x">❌</button>
+                                    </dialog> 
+                                </div>
+                        <div class="pelicula"><a href="./img/poster_spider_man.jpg"><img
+                                    src="./img/poster_oppenheimer.jpg" alt="imagen de blade runner"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog4.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog4">
+                                        <h2>Oppenheimer</h2>
+                                        <p>AÑO: 2023</p>
+                                        <p>Durante la Segunda Guerra Mundial, el teniente general Leslie Groves designa al físico J. Robert Oppenheimer para un grupo de trabajo que está desarrollando el Proyecto Manhattan, cuyo objetivo consiste en fabricar la primera bomba atómica.</p>
+                                        <button onclick="window.dialog4.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                        <div class="pelicula"><a href="./img/poster_spider_man.jpg"><img
+                                    src="./img/poster_yo_soy_groot.jpg" alt="imagen de blade runner"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog5.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog5">
+                                        <h2>Yo soy Groot</h2>
+                                        <p>AÑO: 2022</p>
+                                        <p>Baby Groot es un travieso niño que crece y se mete en líos entre las estrellas como miembro del equipo de superhéroes Guardianes de la Galaxia.</p>
+                                        <button onclick="window.dialog5.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/poster_barbie.jpg" alt="imagen de akira"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog6.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+                                    <dialog id="dialog6">
+                                        <h2>Barbie</h2>
+                                        <p>AÑO: 2023</p>
+                                        <p>Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
+                                        <button onclick="window.dialog6.close();" aria-label="close" class="x">❌</button>
+                                    </dialog></div>
+                    </div>
+                </div>
+                <button role="button" id="flecha-derecha-tendencia" class="flecha-derecha"><img
+                        src="./img/flecha_izquierda.png" alt=""></button>
+            </div>
+        </div>
+        <div class="peliculas-recomendadas contenedor" id="contenedor-popular">
+            <div class="contenedor-titulo-controles">
+                <h3>Lo más popular</h3>
+                <div class="indicadores"></div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda-popular" class="flecha-izquierda"><img
+                        src="./img/flecha_derecha.png" alt=""></i></button>
+                <div class="contenedor-carousel" id="carousel-popular">
+                    <div class="carousel">
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/Breaking Bad.jpg" alt="imagen de halo"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog7.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog7">
+                                        <h2>Breaking Bad</h2>
+                                        <p>AÑO: 2008</p>
+                                        <p>La trama de "Breaking Bad" sigue la transformación de Walter White, un profesor de química de secundaria que se convierte en un fabricante de metanfetamina después de ser diagnosticado con cáncer de pulmón terminal. Junto con un exalumno y traficante de drogas llamado Jesse Pinkman, Walter entra en el mundo del crimen para asegurar el futuro financiero de su familia. A medida que la serie avanza, Walter se sumerge cada vez más en el mundo del narcotráfico, adoptando el alias "Heisenberg" y enfrentando situaciones cada vez más peligrosas.</p>
+                                        <button onclick="window.dialog7.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                        </div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                            src="./img/El Señor de los Anillos.jpg" alt="imagen de halo"></a>
+                    <button class="tarjeta-botón" onclick="window.dialog8.showModal();">informacion</button>
+                    <dialog id="dialog8">
+                        <h2>El señor de los anillos</h2>
+                        <p>AÑO: 2001 </p>
+                        <p>La historia sigue a Frodo Bolsón, un joven hobbit, y su compañía de amigos que se embarcan en una peligrosa misión para destruir un anillo mágico que podría caer en manos del malvado Señor Oscuro Sauron. Su viaje los lleva a través de la Tierra Media, enfrentando numerosos desafíos y enemigos mientras intentan llevar el Anillo Único al Monte del Destino para destruirlo. </p>
+                        <button onclick="window.dialog8.close();" aria-label="close" class="x">❌</button>
+                    </dialog>
+                </div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/Friends.jpg" alt="imagen de walking dead "></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog9.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog9">
+                                        <h2>Friends</h2>
+                                        <p>AÑO: 1994</p>
+                                        <p> "Friends" sigue la vida y las relaciones de un grupo de seis amigos que viven en la ciudad de Nueva York: Ross Geller (interpretado por David Schwimmer), Monica Geller (interpretada por Courteney Cox), Chandler Bing (interpretado por Matthew Perry), Joey Tribbiani (interpretado por Matt LeBlanc), Rachel Green (interpretada por Jennifer Aniston) y Phoebe Buffay (interpretada por Lisa Kudrow). La serie se centra en sus alegrías, desafíos, amores, desamores y momentos cómicos a lo largo de los años.</p>
+                                        <button onclick="window.dialog9.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/poster_oppenheimer.jpg" alt="imagen de batman"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog10.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog10">
+                                        <h2>Oppenheimer</h2>
+                                        <p>AÑO: 2023</p>
+                                        <p>Durante la Segunda Guerra Mundial, el teniente general Leslie Groves designa al físico J. Robert Oppenheimer para un grupo de trabajo que está desarrollando el Proyecto Manhattan, cuyo objetivo consiste en fabricar la primera bomba atómica.</p>
+                                        <button onclick="window.dialog10.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/Interestelar.jpg" alt="imagen de spiderman"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog11.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+                                    <dialog id="dialog11">
+                                        <h2>Interestelar </h2>
+                                        <p>AÑO: 2014</p>
+                                        <p>La película se desarrolla en un futuro en el que la Tierra enfrenta una grave crisis ambiental y alimentaria. Un grupo de astronautas liderado por Cooper (interpretado por Matthew McConaughey) es enviado en una misión espacial desesperada para encontrar un nuevo hogar para la humanidad. Utilizando un agujero de gusano descubierto cerca de Saturno, el equipo se embarca en un viaje interestelar a través de diferentes planetas en busca de un mundo habitable.
+                                            A medida que exploran estos mundos distantes, se enfrentan a desafíos científicos, fenómenos gravitacionales extremos y la dilatación del tiempo debido a la relatividad. La película explora temas profundos como el amor, el tiempo y la supervivencia en un contexto de ciencia ficción. Además, aborda la teoría de la relatividad de Einstein de una manera que es central para la trama.</p>
+                                        <button onclick="window.dialog11.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="./img/Juego de Tronos.jpg" alt="imagen de evangelion"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog12.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+                                    <dialog id="dialog12">
+                                        <h2>Game of thrones</h2>
+                                        <p>AÑO: 2011</p>
+                                        <p> "Game of Thrones" se desarrolla en el continente ficticio de Westeros y sigue las luchas por el poder entre varias casas nobles, todas ellas con el objetivo de reclamar el Trono de Hierro y gobernar los Siete Reinos. La serie está llena de intriga política, traición, conspiraciones, batallas épicas y elementos sobrenaturales.</p>
+                                        <button onclick="window.dialog12.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                    </div>
+                    <button role="button" id="flecha-derecha-popular" class="flecha-derecha"><img
+                            src="./img/flecha_izquierda.png" alt=""></button>
+                </div> 
+            </div>
+            </div>
+            <div class="peliculas-recomendadas contenedor" id="contenedor-tendencia">
+                <div class="contenedor-titulo-controles">
+                    <h3>Top de clasificación</h3>
+                    <div class="indicadores"></div>
+                </div>
+                <div class="contenedor-principal">  
+                    <div class="contenedor-carousel" id="carousel-tendencia">
+                         <div class="carousel">
+                            <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                        src="./img/poster_avatar.jpg" alt="imagen de halo"></a>
+                                        <button class="tarjeta-botón" onclick="window.dialog13.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                        <dialog id="dialog13">
+                                            <h2>Avatar</h2>
+                                            <p>AÑO: 2009</p>
+                                            <p> La película se desarrolla en el año 2154 en el planeta Pandora, un mundo exuberante y peligroso habitado por la especie indígena Na'vi. La historia sigue a Jake Sully (interpretado por Sam Worthington), un ex-marine parapléjico que es seleccionado para participar en el programa Avatar. Este programa permite a los humanos controlar avatares, cuerpos biológicamente modificados que se asemejan a los Na'vi, con el objetivo de establecer contacto con la población nativa y recopilar información sobre el planeta.</p>
+                                            <button onclick="window.dialog13.close();" aria-label="close" class="x">❌</button>
+                                        </dialog>
+                            </div>
+                            <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                        src="./img/poster_barbie.jpg" alt="imagen de watchmen"></a>
+                                        <button class="tarjeta-botón" onclick="window.dialog14.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                        <dialog id="dialog14">
+                                            <h2>Barbie</h2>
+                                            <p>AÑO: 2023</p>
+                                            <p>Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
+                                            <button onclick="window.dialog14.close();" aria-label="close" class="x">❌</button>
+                                        </dialog></div>
+                            <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                        src="./img/Stranger Things.jpg" alt="imagen de ghost in the shell"></a>
+                                        <button class="tarjeta-botón" onclick="window.dialog15.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+                                        <dialog id="dialog15">
+                                            <h2>Stranger Things</h2>
+                                            <p>AÑO: 2016</p>
+                                            <p>La trama de "Stranger Things" se desarrolla en los años 80 en el ficticio pueblo de Hawkins, Indiana. La serie combina elementos de ciencia ficción, terror y aventuras. La historia gira en torno a la desaparición de un niño llamado Will Byers y las extrañas y sobrenaturales experiencias que enfrentan él, sus amigos y su madre mientras intentan encontrarlo. A medida que la trama avanza, se descubre la existencia de un mundo paralelo llamado el "Mundo del Revés" (The Upside Down), poblado por criaturas aterradoras y peligrosas.</p>
+                                            <button onclick="window.dialog15.close();" aria-label="close" class="x">❌</button>
+                                        </dialog></div>
+                            <div class="pelicula"><a href="./img/poster_spider_man.jpg"><img
+                                        src="./img/poster_elemental.jpg" alt="imagen de blade runner"></a>
+                                        <button class="tarjeta-botón" onclick="window.dialog16.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                        <dialog id="dialog16">
+                                            <h2>Elemental</h2>
+                                            <p>AÑO: 2023</p>
+                                            <p>En una ciudad en la que los elementos de fuego, agua, tierra y aire viven en distritos separados, una chica de fuego y un chico de agua descubren que, aunque la sociedad les diga lo contrario, tienen muchas cosas en común.</p>
+                                            <button onclick="window.dialog16.close();" aria-label="close" class="x">❌</button>
+                                        </dialog>
+                                    </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+    </main>
+    <script src="https://kit.fontawesome.com/e07e9905f4.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

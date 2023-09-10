@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <title>Pelis-Gratis</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Pelis-Gratis</h2>
+            <nav>
+                <a href="../index.html" >Inicio</a>
+                <a href="./peliculas.html">Peliculas</a>
+                <a href="./series.html"  class="activo">Series</a>
+                <a href="./popular.html">Popular</a>
+                <a href="./mas_reciente.html">Mas reciente</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">La monja II  </h3>
+                
+                <p class="descripcion">
+                    1956, Francia. Un sacerdote es asesinado, un mal se extiende y la hermana Irene se enfrenta de nuevo a la fuerza malévola de Valak, la monja demonio.
+                </p>
+                <p class="fecha-estreno">Fecha de Estreno: 2023</p>
+                <button role="button" class="boton"><i class="fa-solid fa-play"></i><a
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Reproducir</a></button>
+                <button role="button" class="boton"><i class="fa-solid fa-circle-info"></i>Más Información</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        
+
+        <!-- Primer Carrusel -->
+        <div class="peliculas-recomendadas contenedor" id="contenedor-tendencia">
+            <div class="contenedor-titulo-controles">
+                <h3>Series</h3>
+                <div class="indicadores"></div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda-tendencia" class="flecha-izquierda"><img
+                        src="../img/flecha_derecha.png" alt="">
+                </button>
+
+                <div class="contenedor-carousel" id="carousel-tendencia">
+                     <div class="carousel">
+
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/Juego de Tronos.jpg" alt="imagen de halo"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog1.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                            <dialog id="dialog1">
+                                <h2>Juego de Tronos</h2>
+                                <p>AÑO: 2011</p>
+                                <p>En una tierra donde los veranos duran décadas y los inviernos pueden durar toda una vida, los problemas acechan. Desde las maquinaciones del sur a las salvajes tierras del este, pasando por el helado norte y el milenario muro que protege el reino de las fuerzas tenebrosas, dos poderosas familias mantienen un enfrentamiento letal por gobernar los Siete Reinos de Poniente. Mientras la traición, la lujuria y las fuerzas sobrenaturales sacuden los pilares de los reinos, la sangrienta batalla por el trono de Hierro tendrá consecuencias imprevistas y trascendentales. El invierno se acerca. Que empiece 'Juego de tronos'.</p>
+                                <button onclick="window.dialog1.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+
+
+
+
+
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/Stranger Things.jpg" alt="imagen de watchmen"></a> <button class="tarjeta-botón" onclick="window.dialog2.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog2">
+                                        <h2>Stranger Things</h2>
+                                        <p>AÑO: 2016</p>
+                                        <p>La trama de "Stranger Things" se desarrolla en los años 80 en el ficticio pueblo de Hawkins, Indiana. La serie combina elementos de ciencia ficción, terror y aventuras. La historia gira en torno a la desaparición de un niño llamado Will Byers y las extrañas y sobrenaturales experiencias que enfrentan él, sus amigos y su madre mientras intentan encontrarlo. A medida que la trama avanza, se descubre la existencia de un mundo paralelo llamado el "Mundo del Revés" (The Upside Down), poblado por criaturas aterradoras y peligrosas.</p>
+                                        <button onclick="window.dialog2.close();" aria-label="close" class="x">❌</button>
+                                    </dialog></div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/Breaking Bad.jpg" alt="imagen de ghost in the shell"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog3.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog3">
+                                        <h2>Breaking Bad</h2>
+                                        <p>AÑO: 2014</p>
+                                        <p>La trama de "Breaking Bad" sigue la transformación de Walter White, un profesor de química de secundaria que se convierte en un fabricante de metanfetamina después de ser diagnosticado con cáncer de pulmón terminal. Junto con un exalumno y traficante de drogas llamado Jesse Pinkman, Walter entra en el mundo del crimen para asegurar el futuro financiero de su familia. A medida que la serie avanza, Walter se sumerge cada vez más en el mundo del narcotráfico, adoptando el alias "Heisenberg" y enfrentando situaciones cada vez más peligrosas.</p>
+                                        <button onclick="window.dialog3.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                
+                                </div>
+                        <div class="pelicula"><a href="./img/poster_spider_man.jpg"><img
+                                    src="../img/Friends.jpg" alt="imagen de blade runner"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog4.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog4">
+                                        <h2>Friends</h2>
+                                        <p>AÑO: 1994</p>
+                                        <p> "Friends" sigue la vida y las relaciones de un grupo de seis amigos que viven en la ciudad de Nueva York: Ross Geller (interpretado por David Schwimmer), Monica Geller (interpretada por Courteney Cox), Chandler Bing (interpretado por Matthew Perry), Joey Tribbiani (interpretado por Matt LeBlanc), Rachel Green (interpretada por Jennifer Aniston) y Phoebe Buffay (interpretada por Lisa Kudrow). La serie se centra en sus alegrías, desafíos, amores, desamores y momentos cómicos a lo largo de los años.</p>
+                                        <button onclick="window.dialog4.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+
+                        <div class="pelicula"><a href="./img/poster_spider_man.jpg"><img
+                                    src="../img/The Crown.jpg" alt="imagen de blade runner"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog5.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog5">
+                                        <h2>The Crown</h2>
+                                        <p>AÑO: 2016</p>
+                                        <p> "The Crown" es un drama histórico que sigue la vida de la Reina Isabel II del Reino Unido desde su ascenso al trono en 1952 hasta eventos más contemporáneos. Cada temporada abarca una década o período específico de su reinado y explora los desafíos personales y políticos que enfrenta la monarca, así como los eventos clave de la historia británica y mundial en cada período.</p>
+                                        <button onclick="window.dialog5.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                        <!-- Otras películas y series con datos similares -->
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/The Mandalorian.jpg" alt="imagen de akira"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog6.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog6">
+                                        <h2>The Mandalorian</h2>
+                                        <p>AÑO: 2019</p>
+                                        <p>"The Mandalorian" se desarrolla en la galaxia de Star Wars después de la caída del Imperio Galáctico y antes del surgimiento de la Primera Orden. La historia sigue a un cazarrecompensas solitario conocido como el Mandaloriano, cuyo verdadero nombre es Din Djarin (interpretado por Pedro Pascal). El Mandaloriano es parte de una antigua orden de guerreros conocidos por su habilidad en el combate y su código de honor.</p>
+                                        <button onclick="window.dialog6.close();" aria-label="close" class="x">❌</button>
+                                    </dialog></div>
+                    </div>
+                </div>
+
+                <button role="button" id="flecha-derecha-tendencia" class="flecha-derecha"><img
+                    src="../img/flecha_izquierda.png" alt=""></button>
+
+        </div>   
+
+    </main>
+    <script src="https://kit.fontawesome.com/e07e9905f4.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

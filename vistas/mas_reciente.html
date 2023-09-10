@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Pelis-Gratis</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Pelis-Gratis</h2>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="./peliculas.html">Peliculas</a>
+                <a href="./series.html">Series</a>
+                <a href="./popular.html">Popular</a>
+                <a href="./mas_reciente.html" class="activo">Mas reciente</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">La monja II  </h3>
+                
+                <p class="descripcion">
+                    1956, Francia. Un sacerdote es asesinado, un mal se extiende y la hermana Irene se enfrenta de nuevo a la fuerza malévola de Valak, la monja demonio.
+                </p>
+                <p class="fecha-estreno">Fecha de Estreno: 2023</p>
+                <button role="button" class="boton"><i class="fa-solid fa-play"></i><a
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Reproducir</a></button>
+                <button role="button" class="boton"><i class="fa-solid fa-circle-info"></i>Más Información</button>
+            </div>
+        </div>
+
+
+        <!-- Primer Carrusel -->
+        <div class="peliculas-recomendadas contenedor" id="contenedor-tendencia">
+            <div class="contenedor-titulo-controles">
+                <h3>Mas recientes</h3>
+                <div class="indicadores"></div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda-tendencia" class="flecha-izquierda"><img src="../img/flecha_derecha.png" alt=""></button>
+
+                <div class="contenedor-carousel" id="carousel-tendencia">
+                    <div class="carousel">
+                        <div class="pelicula" data-fecha-estreno="1972">
+                            <a href=""><img src="../img/poster_el_p.png" alt="El Padrino"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog1.showModal();"><span class="tarjeta-botón-content">Información</span></button>
+                            <dialog id="dialog1">
+                                <h2>El Padrino</h2>
+                                <p>Año: 1972</p>
+                                <p>Sinopsis de El Padrino.</p>
+                                <button onclick="window.dialog1.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+                        <div class="pelicula" data-fecha-estreno="1994">
+                            <a href=""><img src="../img/poster_Forrest_Gump.jpg" alt="Forrest Gump"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog2.showModal();"><span class="tarjeta-botón-content">Información</span></button>
+
+                            <dialog id="dialog2">
+                                <h2>Forrest Gump</h2>
+                                <p>Año: 1994</p>
+                                <p>Sinopsis de Forrest Gump.</p>
+                                <button onclick="window.dialog2.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+                        <div class="pelicula" data-fecha-estreno="1994">
+                            <a href="URL_DE_LA_PELICULA"><img src="../img/poster_Pulp_Fiction.jpg" alt="Pulp Fiction"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog3.showModal();"><span class="tarjeta-botón-content">Información</span></button>
+
+                            <dialog id="dialog3">
+                                <h2>Pulp Fiction</h2>
+                                <p>Año: 1994</p>
+                                <p>Sinopsis de Pulp Fiction.</p>
+                                <button onclick="window.dialog3.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+                        <div class="pelicula" data-fecha-estreno="2009">
+                            <a href="URL_DE_LA_PELICULA"><img src="../img/poster_avatar.jpg" alt="Avatar"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog4.showModal();"><span class="tarjeta-botón-content">Información</span></button>
+
+                            <dialog id="dialog4">
+                                <h2>Avatar</h2>
+                                <p>Año: 2009</p>
+                                <p>Sinopsis de Avatar.</p>
+                                <button onclick="window.dialog4.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+                        <div class="pelicula" data-fecha-estreno="2007">
+                            <a href="URL_DE_LA_PELICULA"><img src="../img/Interestelar.jpg" alt="El Señor de los Anillos: La Comunidad del Anillo"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog5.showModal();"><span class="tarjeta-botón-content">Información</span></button>
+                            <dialog id="dialog5">
+                                <h2>Interestelar</h2>
+                                <p>Año: 2007</p>
+                                <p>Interestelar, dirigida por Christopher Nolan, es una película de ciencia ficción que explora la búsqueda de un nuevo hogar para la humanidad en un futuro distópico. La película aborda temas de viajes espaciales, agujeros de gusano y la supervivencia de la especie humana.</p>
+                                <button onclick="window.dialog5.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+                        <div class="pelicula" data-fecha-estreno="2016">
+                            <a href="URL_DE_LA_PELICULA"><img src="../img/Akira.jpg" alt="Titanic"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog6.showModal();"><span class="tarjeta-botón-content">Información</span></button>
+                            <dialog id="dialog6">
+                                <h2>Akira</h2>
+                                <p>Año: 2016</p>
+                                <p>Akira es una película de animación japonesa dirigida por Katsuhiro Otomo. Ambientada en un Tokio postapocalíptico, la película sigue a Kaneda y Tetsuo, dos amigos involucrados en un misterioso proyecto gubernamental relacionado con habilidades psíquicas.</p>
+                                <button onclick="window.dialog6.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
+                <button role="button" id="flecha-derecha-tendencia" class="flecha-derecha"><img
+                    src="../img/flecha_izquierda.png" alt=""></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/e07e9905f4.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <title>Pelis-Gratis</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Pelis-Gratis</h2>
+            <nav>
+                <a href="../index.html" >Inicio</a>
+                <a href="./peliculas.html">Peliculas</a>
+                <a href="./series.html"  >Series</a>
+                <a href="./popular.html" class="activo">Popular</a>
+                <a href="./mas_reciente.html">Mas reciente</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">La monja II  </h3>
+                
+                <p class="descripcion">
+                    1956, Francia. Un sacerdote es asesinado, un mal se extiende y la hermana Irene se enfrenta de nuevo a la fuerza malévola de Valak, la monja demonio.
+                </p>
+                <p class="fecha-estreno">Fecha de Estreno: 2023</p>
+                <button role="button" class="boton"><i class="fa-solid fa-play"></i><a
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Reproducir</a></button>
+                <button role="button" class="boton"><i class="fa-solid fa-circle-info"></i>Más Información</button>
+            </div>
+        </div>
+
+        <!-- Primer Carrusel -->
+        <div class="peliculas-recomendadas contenedor" id="contenedor-tendencia">
+            <div class="contenedor-titulo-controles">
+                <h3>Popular</h3>
+                <div class="indicadores"></div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda-tendencia" class="flecha-izquierda"><img
+                        src="../img/flecha_derecha.png" alt="">
+                </button>
+
+                <div class="contenedor-carousel" id="carousel-tendencia">
+                     <div class="carousel">
+
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/poster_oppenheimer.jpg" alt="imagen de halo"></a>
+                            <button class="tarjeta-botón" onclick="window.dialog1.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                            <dialog id="dialog1">
+                                <h2>Oppenheimer</h2>
+                                <p>AÑO: 2015</p>
+                                <p>En "Bob Esponja: La Gran Aventura," Bob Esponja y sus amigos de Fondo de Bikini se embarcan en una emocionante
+                                  búsqueda para recuperar la receta secreta de las Cangreburgers, que ha sido robada por el astuto pirata Alameda
+                                  Jack. A lo largo del viaje, se enfrentan a peligros marinos, criaturas extrañas y desafíos hilarantes mientras
+                                  descubren el poder de la amistad y la determinación. ¿Lograrán recuperar la receta y salvar Fondo de Bikini de la
+                                  crisis de las Cangreburgers?</p>
+                                <button onclick="window.dialog1.close();" aria-label="close" class="x">❌</button>
+                            </dialog>
+                        </div>
+
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/Breaking Bad.jpg" alt="imagen de watchmen"></a> <button class="tarjeta-botón" onclick="window.dialog2.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog2">
+                                        <h2>Bob Esponja: Un héroe fuera del agua</h2>
+                                        <p>AÑO: 2015</p>
+                                        <p>En "Bob Esponja: La Gran Aventura," Bob Esponja y sus amigos de Fondo de Bikini se embarcan en una emocionante
+                                          búsqueda para recuperar la receta secreta de las Cangreburgers, que ha sido robada por el astuto pirata Alameda
+                                          Jack. A lo largo del viaje, se enfrentan a peligros marinos, criaturas extrañas y desafíos hilarantes mientras
+                                          descubren el poder de la amistad y la determinación. ¿Lograrán recuperar la receta y salvar Fondo de Bikini de la
+                                          crisis de las Cangreburgers?</p>
+                                        <button onclick="window.dialog2.close();" aria-label="close" class="x">❌</button>
+                                    </dialog></div>
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/The Crown.jpg" alt="imagen de ghost in the shell"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog3.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog3">
+                                        <h2>Bob Esponja: Un héroe fuera del agua</h2>
+                                        <p>AÑO: 2015</p>
+                                        <p>En "Bob Esponja: La Gran Aventura," Bob Esponja y sus amigos de Fondo de Bikini se embarcan en una emocionante
+                                          búsqueda para recuperar la receta secreta de las Cangreburgers, que ha sido robada por el astuto pirata Alameda
+                                          Jack. A lo largo del viaje, se enfrentan a peligros marinos, criaturas extrañas y desafíos hilarantes mientras
+                                          descubren el poder de la amistad y la determinación. ¿Lograrán recuperar la receta y salvar Fondo de Bikini de la
+                                          crisis de las Cangreburgers?</p>
+                                        <button onclick="window.dialog3.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                
+                                </div>
+                        <div class="pelicula"><a href="./img/poster_spider_man.jpg"><img
+                                    src="../img/Titanic.jpg" alt="imagen de blade runner"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog4.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog4">
+                                        <h2>Bob Esponja: Un héroe fuera del agua</h2>
+                                        <p>AÑO: 2015</p>
+                                        <p>En "Bob Esponja: La Gran Aventura," Bob Esponja y sus amigos de Fondo de Bikini se embarcan en una emocionante
+                                          búsqueda para recuperar la receta secreta de las Cangreburgers, que ha sido robada por el astuto pirata Alameda
+                                          Jack. A lo largo del viaje, se enfrentan a peligros marinos, criaturas extrañas y desafíos hilarantes mientras
+                                          descubren el poder de la amistad y la determinación. ¿Lograrán recuperar la receta y salvar Fondo de Bikini de la
+                                          crisis de las Cangreburgers?</p>
+                                        <button onclick="window.dialog4.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+
+                        <div class="pelicula"><a href="../img/Juego de Tronos.jpg"><img
+                                    src="../img/poster_avatar.jpg" alt="imagen de blade runner"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog5.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog5">
+                                        <h2>Bob Esponja: Un héroe fuera del agua</h2>
+                                        <p>AÑO: 2015</p>
+                                        <p>En "Bob Esponja: La Gran Aventura," Bob Esponja y sus amigos de Fondo de Bikini se embarcan en una emocionante
+                                          búsqueda para recuperar la receta secreta de las Cangreburgers, que ha sido robada por el astuto pirata Alameda
+                                          Jack. A lo largo del viaje, se enfrentan a peligros marinos, criaturas extrañas y desafíos hilarantes mientras
+                                          descubren el poder de la amistad y la determinación. ¿Lograrán recuperar la receta y salvar Fondo de Bikini de la
+                                          crisis de las Cangreburgers?</p>
+                                        <button onclick="window.dialog5.close();" aria-label="close" class="x">❌</button>
+                                    </dialog>
+                                </div>
+                        <!-- Otras películas y series con datos similares -->
+                        <div class="pelicula"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
+                                    src="../img/Stranger Things.jpg" alt="imagen de akira"></a>
+                                    <button class="tarjeta-botón" onclick="window.dialog6.showModal();"><span class="tarjeta-botón-content ">informacion </span></button>
+
+                                    <dialog id="dialog6">
+                                        <h2>Bob Esponja: Un héroe fuera del agua</h2>
+                                        <p>AÑO: 2015</p>
+                                        <p>En "Bob Esponja: La Gran Aventura," Bob Esponja y sus amigos de Fondo de Bikini se embarcan en una emocionante
+                                          búsqueda para recuperar la receta secreta de las Cangreburgers, que ha sido robada por el astuto pirata Alameda
+                                          Jack. A lo largo del viaje, se enfrentan a peligros marinos, criaturas extrañas y desafíos hilarantes mientras
+                                          descubren el poder de la amistad y la determinación. ¿Lograrán recuperar la receta y salvar Fondo de Bikini de la
+                                          crisis de las Cangreburgers?</p>
+                                        <button onclick="window.dialog6.close();" aria-label="close" class="x">❌</button>
+                                    </dialog></div>
+                    </div>
+                </div>
+
+                <button role="button" id="flecha-derecha-tendencia" class="flecha-derecha"><img
+                    src="../img/flecha_izquierda.png" alt=""></button>
+
+        </div>
+
+    </main>
+    <script src="https://kit.fontawesome.com/e07e9905f4.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
